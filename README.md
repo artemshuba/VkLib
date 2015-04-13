@@ -8,8 +8,8 @@ Currently doesn't cover whole api but work in progress.
 var vk = new Vkontakte("YOUR_APP_ID", "YOUR_APP_SECRET");
 
 //Getting info with photo and city for user with id 1
-var user = vk.Users.Get(1,"photo_50,city");
+var user = await vk.Users.Get(1,"photo_50,city");
 
 //Getting audios for user with id
-var audios = vk.Audios.Get(1);
+var audios = await vk.Audios.Get(1);
 ```
