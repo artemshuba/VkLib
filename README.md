@@ -9,7 +9,7 @@ var vk = new Vkontakte("YOUR_APP_ID", "YOUR_APP_SECRET");
 ```
 ### Authentication
 To invoke vk methods, you need to perform authentication at first.
-To authenticate you should show a WebView (or similar) component to the user and handle redirect to https://oauth.vk.com/blank.html. More info is here: http://vk.com/dev/auth_mobile
+To authenticate you should show a WebView (or similar) component to user and handle redirect to https://oauth.vk.com/blank.html. More info is here: http://vk.com/dev/auth_mobile.
 VkLib provides 2 helper methods for this:
 ```
 //Returns auth url for opening in WebView
