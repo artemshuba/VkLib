@@ -21,8 +21,9 @@ var oauthResult = vk.OAuth.ProcessAuth(url);
 ```
 After performing authentication you must set access token to vk object
 ```
-vk.AccessToken = token;
+vk.AccessToken = oauthResult.AccessToken;
 ```
+You can save this token in local file and reuse later. Note that token can expire (check the HasExpired property).
 ### Calling methods
 Calling methods is similar to vk api. Here are some samples:
 ```
