@@ -33,3 +33,6 @@ var user = await vk.Users.Get(1,"photo_50,city");
 //Getting audios for user with id
 var audios = await vk.Audios.Get(1);
 ```
+
+### Sample app
+[Here](https://github.com/Stealth2012/VkPeopleSearchApp) you can find a sample app that shows hot to perform OAuth and search users with VkLib.
