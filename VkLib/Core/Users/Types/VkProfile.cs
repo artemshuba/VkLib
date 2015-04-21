@@ -1,19 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using VkLib.Core.Users.Types;
 using VkLib.Extensions;
 
 namespace VkLib.Core.Users
 {
-    /// <summary>
-    /// User sex
-    /// </summary>
-    public enum VkSex
-    {
-        Uknown = 0,
-        Female = 1,
-        Male = 2,
-    }
-
     /// <summary>
     /// User profile
     /// <seealso cref="http://vk.com/dev/fields"/>
@@ -41,7 +35,7 @@ namespace VkLib.Core.Users
         /// <summary>
         /// Sex
         /// </summary>
-        public VkSex Sex { get; set; }
+        public VkUserSex Sex { get; set; }
 
         /// <summary>
         /// Is online
@@ -58,16 +52,32 @@ namespace VkLib.Core.Users
         /// </summary>
         public DateTime LastSeen { get; set; }
 
-        public static VkProfile FromJson(JToken json)
-        {
-            if (json == null)
-                throw new ArgumentNullException("json");
+        /// <summary>
+        /// Is user verified
+        /// </summary>
+        public bool IsVerified { get; set; }
 
-            return ParseV5(json);
-        }
+        /// <summary>
+        /// User's universities
+        /// </summary>
+        public List<VkUniversity> Universities { get; set; }
 
-        //VK Api v5.0
-        private static VkProfile ParseV5(JToken json)
+        /// <summary>
+        /// Country
+        /// </summary>
+        public VkCountry Country { get; set; }
+
+        /// <summary>
+        /// City
+        /// </summary>
+        public VkCity City { get; set; }
+
+        /// <summary>
+        /// Is user a friend of current user
+        /// </summary>
+        public bool IsFriend { get; set; }
+
+        internal static VkProfile FromJson(JToken json)
         {
             var result = new VkProfile();
 
@@ -109,9 +119,22 @@ namespace VkLib.Core.Users
                 result.LastSeen = DateTimeExtensions.UnixTimeStampToDateTime((long)json["last_seen"]["time"]);
 
             if (json["sex"] != null)
-            {
-                result.Sex = (VkSex)(int)json["sex"];
-            }
+                result.Sex = (VkUserSex)(int)json["sex"];
+
+            if (json["verified"] != null)
+                result.IsVerified = json["verified"].Value<int>() == 1;
+
+            if (json["universities"] != null)
+                result.Universities = json["universities"].Select(VkUniversity.FromJson).ToList();
+
+            if (json["city"] != null)
+                result.City = VkCity.FromJson(json["city"]);
+
+            if (json["country"] != null)
+                result.Country = VkCountry.FromJson(json["country"]);
+
+            if (json["is_friend"] != null)
+                result.IsFriend = json["is_friend"].Value<int>() == 1;
 
             return result;
         }

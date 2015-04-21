@@ -21,12 +21,13 @@ namespace VkLib.Core.Auth
             _vkontakte = vkontakte;
         }
 
-        public string GetAuthUrl(VkScopeSettings scope, VkAuthDisplayType display)
+        public string GetAuthUrl(VkScopeSettings? scope, VkAuthDisplayType display)
         {
             var parameters = new Dictionary<string, string>();
 
             parameters.Add("client_id", _vkontakte.AppId);
-            parameters.Add("scope", ((int)scope).ToString());
+            if (scope != null)
+                parameters.Add("scope", ((int)scope).ToString());
             parameters.Add("redirect_uri", "https://oauth.vk.com/blank.html");
             parameters.Add("v", _vkontakte.ApiVersion);
             parameters.Add("response_type", "token");
@@ -47,6 +48,11 @@ namespace VkLib.Core.Auth
             }
 
             return VkConst.OAuthUrl + parameters.ToUrlParams();
+        }
+
+        public string GetAuthRedirectUrl()
+        {
+            return VkConst.OAuthRedirectUrl;
         }
 
         public OAuthResult ProcessAuth(Uri uri)

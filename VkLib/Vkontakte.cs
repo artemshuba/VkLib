@@ -2,6 +2,7 @@
 using VkLib.Core.Account;
 using VkLib.Core.Audio;
 using VkLib.Core.Auth;
+using VkLib.Core.Database;
 using VkLib.Core.Favorites;
 using VkLib.Core.Friends;
 using VkLib.Core.Groups;
@@ -25,7 +26,7 @@ namespace VkLib
     {
         private readonly string _clientSecret;
         private readonly string _appId;
-        private string _apiVersion = "5.9";
+        private string _apiVersion = "5.29";
 
         internal string AppId
         {
@@ -251,10 +252,22 @@ namespace VkLib
             }
         }
 
+        /// <summary>
+        /// Database
+        /// </summary>
+        public VkDatabaseRequest Database
+        {
+            get
+            {
+                return new VkDatabaseRequest(this);
+            }
+        }
+
         public Vkontakte(string appId, string clientSecret = null, string apiVersion = null)
         {
             AccessToken = new AccessToken();
-            ApiVersion = apiVersion;
+            if (apiVersion != null)
+                ApiVersion = apiVersion;
 
             _appId = appId;
             _clientSecret = clientSecret;

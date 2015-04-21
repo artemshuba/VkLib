@@ -96,6 +96,7 @@
     <Compile Include="Core\Audio\VkAudio.cs" />
     <Compile Include="Core\Audio\VkAudioAlbum.cs" />
     <Compile Include="Core\Audio\VkAudioRequest.cs" />
+    <Compile Include="Core\Database\VkDatabaseRequest.cs" />
     <Compile Include="Core\Favorites\VkFavoritesRequest.cs" />
     <Compile Include="Core\Friends\VkFriendsRequest.cs" />
     <Compile Include="Core\Groups\VkGroup.cs" />
@@ -114,8 +115,14 @@
     <Compile Include="Core\Status\VkStatusRequest.cs" />
     <Compile Include="Core\Storage\VkStorageRequest.cs" />
     <Compile Include="Core\Subscriptions\VkSubscriptionsRequest.cs" />
-    <Compile Include="Core\Users\VkProfile.cs" />
-    <Compile Include="Core\Users\VkProfileBase.cs" />
+    <Compile Include="Core\Users\Types\VkCity.cs" />
+    <Compile Include="Core\Users\Types\VkCountry.cs" />
+    <Compile Include="Core\Users\Types\VkProfile.cs" />
+    <Compile Include="Core\Users\Types\VkProfileBase.cs" />
+    <Compile Include="Core\Users\Types\VkUniversity.cs" />
+    <Compile Include="Core\Users\Types\VkUserSex.cs" />
+    <Compile Include="Core\Users\Types\VkUsersSortType.cs" />
+    <Compile Include="Core\Users\Types\VkUserStatus.cs" />
     <Compile Include="Core\Users\VkUsersRequest.cs" />
     <Compile Include="Core\Auth\VkDirectAuthRequest.cs" />
     <Compile Include="Core\Video\VkVideo.cs" />

@@ -30,6 +30,14 @@ namespace VkLib.Core.Auth
         public string ErrorDescription { get; set; }
 
         /// <summary>
+        /// Is auth success
+        /// </summary>
+        public bool IsSuccess
+        {
+            get { return AccessToken != null && !string.IsNullOrEmpty(AccessToken.Token) && !AccessToken.HasExpired; }
+        }
+
+        /// <summary>
         /// Получить токен из адреса
         /// </summary>
         /// <param name="uri">Адрес, полученный после OAuth авторизации</param>
