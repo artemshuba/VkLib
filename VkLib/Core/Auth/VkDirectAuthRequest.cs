@@ -73,8 +73,6 @@ namespace VkLib.Core.Auth
                     default:
                         throw new VkException(response["error"].Value<string>(), response["error_description"].Value<string>());
                 }
-
-                return null;
             }
 
             var token = new AccessToken();

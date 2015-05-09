@@ -34,7 +34,7 @@ namespace VkLib.Core.Attachments
             this.Url = audio.Url;
         }
 
-        public static new VkAudioAttachment FromJson(JToken json)
+        public static VkAudioAttachment FromJson(JToken json)
         {
             if (json == null)
                 throw new ArgumentException("Json can not be null.");

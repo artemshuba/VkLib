@@ -86,29 +86,7 @@ namespace VkLib.Core.Attachments
             this.Date = photo.Created;
         }
 
-        public static new VkPhotoAttachment FromJson(JToken json)
-        {
-            if (json == null)
-                throw new ArgumentException("Json can not be null.");
-
-            return ParseV5(json);
-        }
-
-        //VK Api v3.0
-        private static VkPhotoAttachment ParseV3(JToken json)
-        {
-            var result = new VkPhotoAttachment();
-            result.Id = json["pid"].Value<long>();
-            result.OwnerId = json["owner_id"].Value<long>();
-            if (json["src"] != null)
-                result.Source = json["src"].Value<string>();
-            if (json["src_big"] != null)
-                result.SourceBig = json["src_big"].Value<string>();
-            return result;
-        }
-
-        //VK Api v5.0
-        private static VkPhotoAttachment ParseV5(JToken json)
+        public static VkPhotoAttachment FromJson(JToken json)
         {
             var result = new VkPhotoAttachment();
 

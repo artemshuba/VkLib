@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC47FBCB-2D74-4EE0-8BE5-74F217C3916D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VkLIb.WinRT</RootNamespace>
+    <AssemblyName>VkLIb.WinRT</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+    <TargetPlatform Include="Windows, Version=8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VkLib\Core\Account\VkAccountRequest.cs">
+      <Link>Core\Account\VkAccountRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Attachments\VkAttachment.cs">
+      <Link>Core\Attachments\VkAttachment.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Attachments\VkAudioAttachment.cs">
+      <Link>Core\Attachments\VkAudioAttachment.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Attachments\VkLinkAttachment.cs">
+      <Link>Core\Attachments\VkLinkAttachment.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Attachments\VkPhotoAttachment.cs">
+      <Link>Core\Attachments\VkPhotoAttachment.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Audio\VkAudio.cs">
+      <Link>Core\Audio\VkAudio.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Audio\VkAudioAlbum.cs">
+      <Link>Core\Audio\VkAudioAlbum.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Audio\VkAudioRequest.cs">
+      <Link>Core\Audio\VkAudioRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Audio\VkGenre.cs">
+      <Link>Core\Audio\VkGenre.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Auth\AccessToken.cs">
+      <Link>Core\Auth\AccessToken.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Auth\OAuthResult.cs">
+      <Link>Core\Auth\OAuthResult.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Auth\VkDirectAuthRequest.cs">
+      <Link>Core\Auth\VkDirectAuthRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Auth\VkOAuthRequest.cs">
+      <Link>Core\Auth\VkOAuthRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Auth\VkScopeSettings.cs">
+      <Link>Core\Auth\VkScopeSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Database\VkDatabaseRequest.cs">
+      <Link>Core\Database\VkDatabaseRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Favorites\VkFavoritesRequest.cs">
+      <Link>Core\Favorites\VkFavoritesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Friends\VkFriendsRequest.cs">
+      <Link>Core\Friends\VkFriendsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Groups\VkGroup.cs">
+      <Link>Core\Groups\VkGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Groups\VkGroupsRequest.cs">
+      <Link>Core\Groups\VkGroupsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Messages\VkLongPollMessage.cs">
+      <Link>Core\Messages\VkLongPollMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Messages\VkLongPollService.cs">
+      <Link>Core\Messages\VkLongPollService.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Messages\VkMessage.cs">
+      <Link>Core\Messages\VkMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Messages\VkMessagesRequest.cs">
+      <Link>Core\Messages\VkMessagesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\News\VkNewsEntry.cs">
+      <Link>Core\News\VkNewsEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\News\VkNewsRequest.cs">
+      <Link>Core\News\VkNewsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\News\VkNewsResponse.cs">
+      <Link>Core\News\VkNewsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Photos\VkPhoto.cs">
+      <Link>Core\Photos\VkPhoto.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Photos\VkPhotosRequest.cs">
+      <Link>Core\Photos\VkPhotosRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Photos\VkUploadPhotoResponse.cs">
+      <Link>Core\Photos\VkUploadPhotoResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Stats\VkStatsRequest.cs">
+      <Link>Core\Stats\VkStatsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Status\VkStatusRequest.cs">
+      <Link>Core\Status\VkStatusRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Storage\VkStorageRequest.cs">
+      <Link>Core\Storage\VkStorageRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Subscriptions\VkSubscriptionsRequest.cs">
+      <Link>Core\Subscriptions\VkSubscriptionsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Users\Types\VkCity.cs">
+      <Link>Core\Users\Types\VkCity.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Users\Types\VkCountry.cs">
+      <Link>Core\Users\Types\VkCountry.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Users\Types\VkProfile.cs">
+      <Link>Core\Users\Types\VkProfile.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Users\Types\VkProfileBase.cs">
+      <Link>Core\Users\Types\VkProfileBase.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Users\Types\VkUniversity.cs">
+      <Link>Core\Users\Types\VkUniversity.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Users\Types\VkUserSex.cs">
+      <Link>Core\Users\Types\VkUserSex.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Users\Types\VkUsersSortType.cs">
+      <Link>Core\Users\Types\VkUsersSortType.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Users\Types\VkUserStatus.cs">
+      <Link>Core\Users\Types\VkUserStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Users\VkUsersRequest.cs">
+      <Link>Core\Users\VkUsersRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Video\VkVideo.cs">
+      <Link>Core\Video\VkVideo.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Video\VkVideoRequest.cs">
+      <Link>Core\Video\VkVideoRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\VkErrorProcessor.cs">
+      <Link>Core\VkErrorProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\VkItemsResponse.cs">
+      <Link>Core\VkItemsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\VkRequest.cs">
+      <Link>Core\VkRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Wall\VkWallEntry.cs">
+      <Link>Core\Wall\VkWallEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Core\Wall\VkWallRequest.cs">
+      <Link>Core\Wall\VkWallRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Error\VkAccessDeniedException.cs">
+      <Link>Error\VkAccessDeniedException.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Error\VkCaptchaNeededException.cs">
+      <Link>Error\VkCaptchaNeededException.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Error\VkException.cs">
+      <Link>Error\VkException.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Error\VkInvalidClientException.cs">
+      <Link>Error\VkInvalidClientException.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Error\VkInvalidTokenException.cs">
+      <Link>Error\VkInvalidTokenException.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Error\VkNeedValidationException.cs">
+      <Link>Error\VkNeedValidationException.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Error\VkStatusBroadcastDisabledException.cs">
+      <Link>Error\VkStatusBroadcastDisabledException.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Extensions\DateTimeExtensions.cs">
+      <Link>Extensions\DateTimeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Extensions\DictionaryExtensions.cs">
+      <Link>Extensions\DictionaryExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Extensions\StreamExtensions.cs">
+      <Link>Extensions\StreamExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\VkConst.cs">
+      <Link>VkConst.cs</Link>
+    </Compile>
+    <Compile Include="..\VkLib\Vkontakte.cs">
+      <Link>Vkontakte.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Execute\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
