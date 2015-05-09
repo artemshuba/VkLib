@@ -26,7 +26,7 @@ namespace VkLib
     {
         private readonly string _clientSecret;
         private readonly string _appId;
-        private string _apiVersion = "5.29";
+        private string _apiVersion = "5.30";
 
         internal string AppId
         {

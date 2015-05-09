@@ -93,7 +93,7 @@ namespace VkLib.Core.Messages
 
             if (response.SelectToken("response.items") != null)
             {
-                return new VkItemsResponse<VkMessage>(response["response"]["items"].Select(i => VkMessage.FromJson(i, _vkontakte.ApiVersion)).ToList(), (int)response["response"]["count"]);
+                return new VkItemsResponse<VkMessage>(response["response"]["items"].Select(i => VkMessage.FromJson(i["message"], _vkontakte.ApiVersion)).ToList(), (int)response["response"]["count"]);
             }
 
             return VkItemsResponse<VkMessage>.Empty;
