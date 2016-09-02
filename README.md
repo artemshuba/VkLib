@@ -35,4 +35,4 @@ var audios = await vk.Audios.Get(1);
 ```
 
 ### Sample app
-[Here](https://github.com/Stealth2012/VkPeopleSearchApp) you can find a sample app that shows hot to perform OAuth and search users with VkLib.
+[Here](https://github.com/Stealth2012/VkPeopleSearchApp) you can find a sample app that shows how to perform OAuth and search users with VkLib.
