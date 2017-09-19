@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53A806D8-1A75-41E3-B672-C75639E4C7A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VkLib</RootNamespace>
+    <AssemblyName>VkLib</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Core\Account\VkAccountRequest.cs" />
+    <Compile Include="Core\Attachments\VkAttachment.cs" />
+    <Compile Include="Core\Attachments\VkAudioAttachment.cs" />
+    <Compile Include="Core\Attachments\VkDocumentAttachment.cs" />
+    <Compile Include="Core\Attachments\VkGiftAttachment.cs" />
+    <Compile Include="Core\Attachments\VkLinkAttachment.cs" />
+    <Compile Include="Core\Attachments\VkPhotoAttachment.cs" />
+    <Compile Include="Core\Attachments\VkStickerAttachment.cs" />
+    <Compile Include="Core\Attachments\VkVideoAttachment.cs" />
+    <Compile Include="Core\Attachments\VkWallPostAttachment.cs" />
+    <Compile Include="Core\Audio\Types\VkArtist.cs" />
+    <Compile Include="Core\Audio\Types\VkAudio.cs" />
+    <Compile Include="Core\Audio\Types\VkAudioAlbum.cs" />
+    <Compile Include="Core\Audio\Types\VkCatalogBlock.cs" />
+    <Compile Include="Core\Audio\Types\VkExtendedPlaylist.cs" />
+    <Compile Include="Core\Audio\Types\VkPlaylist.cs" />
+    <Compile Include="Core\Audio\Types\VkThumb.cs" />
+    <Compile Include="Core\Audio\VkAudioRequest.cs" />
+    <Compile Include="Core\Audio\Types\VkGenre.cs" />
+    <Compile Include="Core\Audio\VkUploadAudioResponse.cs" />
+    <Compile Include="Core\Auth\VkAccessToken.cs" />
+    <Compile Include="Core\Auth\VkOAuthResult.cs" />
+    <Compile Include="Core\Auth\VkDirectAuthRequest.cs" />
+    <Compile Include="Core\Auth\VkOAuthRequest.cs" />
+    <Compile Include="Core\Auth\VkScopeSettings.cs" />
+    <Compile Include="Core\Documents\VkDocumentsRequest.cs" />
+    <Compile Include="Core\Documents\VkUploadDocumentResponse.cs" />
+    <Compile Include="Core\Execute\VkExecuteRequest.cs" />
+    <Compile Include="Core\Favorites\VkFavoritesRequest.cs" />
+    <Compile Include="Core\Friends\VkFriendsRequest.cs" />
+    <Compile Include="Core\Groups\VkGroup.cs" />
+    <Compile Include="Core\Groups\VkGroupsRequest.cs" />
+    <Compile Include="Core\Messages\Types\VkConversation.cs" />
+    <Compile Include="Core\Messages\Types\VkDialog.cs" />
+    <Compile Include="Core\Messages\Types\VkGeo.cs" />
+    <Compile Include="Core\Messages\Types\VkLongPollAttachment.cs" />
+    <Compile Include="Core\Messages\Types\VkLongPollMessage.cs" />
+    <Compile Include="Core\Messages\VkLongPollService.cs" />
+    <Compile Include="Core\Messages\Types\VkMessage.cs" />
+    <Compile Include="Core\Messages\VkMessagesRequest.cs" />
+    <Compile Include="Core\Messages\Types\VkPlace.cs" />
+    <Compile Include="Core\News\VkNewsEntry.cs" />
+    <Compile Include="Core\News\VkNewsRequest.cs" />
+    <Compile Include="Core\News\VkNewsResponse.cs" />
+    <Compile Include="Core\Photos\VkPhoto.cs" />
+    <Compile Include="Core\Photos\VkPhotosRequest.cs" />
+    <Compile Include="Core\Photos\VkUploadPhotoResponse.cs" />
+    <Compile Include="Core\Push\VkPushSettings.cs" />
+    <Compile Include="Core\Stats\VkStatsRequest.cs" />
+    <Compile Include="Core\Status\VkStatusRequest.cs" />
+    <Compile Include="Core\Storage\VkStorageRequest.cs" />
+    <Compile Include="Core\Store\VkStickerPackProduct.cs" />
+    <Compile Include="Core\Store\VkStickerProduct.cs" />
+    <Compile Include="Core\Store\VkStoreProduct.cs" />
+    <Compile Include="Core\Store\VkStoreRequest.cs" />
+    <Compile Include="Core\Subscriptions\VkSubscriptionsRequest.cs" />
+    <Compile Include="Core\Users\Types\VkCity.cs" />
+    <Compile Include="Core\Users\Types\VkCountry.cs" />
+    <Compile Include="Core\Users\Types\VkUniversity.cs" />
+    <Compile Include="Core\Users\Types\VkUserSex.cs" />
+    <Compile Include="Core\Users\Types\VkUsersSortType.cs" />
+    <Compile Include="Core\Users\Types\VkUserStatus.cs" />
+    <Compile Include="Core\Users\VkProfile.cs" />
+    <Compile Include="Core\Users\VkProfileBase.cs" />
+    <Compile Include="Core\Users\VkUsersRequest.cs" />
+    <Compile Include="Core\Video\VkUploadVideoResponse.cs" />
+    <Compile Include="Core\Video\VkVideo.cs" />
+    <Compile Include="Core\Video\VkVideoRequest.cs" />
+    <Compile Include="Core\Video\VkVideoSaveResponse.cs" />
+    <Compile Include="Core\VkErrorProcessor.cs" />
+    <Compile Include="Core\VkItemsResponse.cs" />
+    <Compile Include="Core\VkRequest.cs" />
+    <Compile Include="Core\Wall\VkWallEntry.cs" />
+    <Compile Include="Core\Wall\VkWallRequest.cs" />
+    <Compile Include="Error\VkAccessDeniedException.cs" />
+    <Compile Include="Error\VkCaptchaNeededException.cs" />
+    <Compile Include="Error\VkException.cs" />
+    <Compile Include="Error\VkFloodControlException.cs" />
+    <Compile Include="Error\VkInvalidClientException.cs" />
+    <Compile Include="Error\VkInvalidTokenException.cs" />
+    <Compile Include="Error\VkNeedValidationException.cs" />
+    <Compile Include="Error\VkStatusBroadcastDisabledException.cs" />
+    <Compile Include="Error\VkTooManyRequestsException.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\StreamExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VkConst.cs" />
+    <Compile Include="Vk.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
