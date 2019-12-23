@@ -1,6 +1,6 @@
 # VkLib
-Portable class library to work with VK.com api. Used in [Meridian](https://github.com/Stealth2012/meridian) and some other projects.
-Currently doesn't cover whole api but work in progress.
+Portable class library to work with VK.com api. Used in [Meridian](https://github.com/artemshuba/meridian), [Colibri](https://github.com/artemshuba/Colibri) and some other projects.
+Currently doesn't cover the whole api.
 
 # Example
 ### Initializing
@@ -35,4 +35,4 @@ var audios = await vk.Audios.Get(1);
 ```
 
 ### Sample app
-[Here](https://github.com/Stealth2012/VkPeopleSearchApp) you can find a sample app that shows how to perform OAuth and search users with VkLib.
+[Here](https://github.com/artemshuba/VkPeopleSearchApp) you can find a sample app that shows how to perform OAuth and search users with VkLib.
