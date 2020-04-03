@@ -58,7 +58,7 @@ namespace VkLib.Core.Audio.Types
         /// <summary>
         /// Id
         /// </summary>
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         /// <summary>
         /// Title
@@ -117,7 +117,7 @@ namespace VkLib.Core.Audio.Types
 
             var result = new VkCatalogBlock();
 
-            result.Id = json["id"].Value<int>();
+            result.Id = json["id"].Value<string>();
             result.Title = json["title"].Value<string>();
             result.Subtitle = json["subtitle"].Value<string>();
 

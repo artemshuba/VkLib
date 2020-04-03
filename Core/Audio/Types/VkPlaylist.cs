@@ -86,11 +86,6 @@ namespace VkLib.Core.Audio.Types
         public int Count { get; set; }
 
         /// <summary>
-        /// Is following
-        /// </summary>
-        public bool IsFollowing { get; set; }
-
-        /// <summary>
         /// Number of followers
         /// </summary>
         public long Followers { get; set; }
@@ -144,10 +139,10 @@ namespace VkLib.Core.Audio.Types
             result.Description = json["description"].Value<string>();
 
             result.Genres = json["genres"].ToObject<List<VkPlaylistGenre>>();
-            result.Artists = json["main_artists"].ToObject<List<VkArtist>>();
+            if (json["main_artists"] != null)
+                result.Artists = json["main_artists"].ToObject<List<VkArtist>>();
 
             result.Count = json["count"].Value<int>();
-            result.IsFollowing = json["is_following"].Value<bool>();
 
             result.Followers = json["followers"].Value<long>();
             result.Plays = json["plays"].Value<long>();
