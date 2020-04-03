@@ -144,7 +144,7 @@ namespace VkLib.Core.Audio.Types
             result.Description = json["description"].Value<string>();
 
             result.Genres = json["genres"].ToObject<List<VkPlaylistGenre>>();
-            result.Artists = json["artists"].ToObject<List<VkArtist>>();
+            result.Artists = json["main_artists"].ToObject<List<VkArtist>>();
 
             result.Count = json["count"].Value<int>();
             result.IsFollowing = json["is_following"].Value<bool>();
