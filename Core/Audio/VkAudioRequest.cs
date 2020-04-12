@@ -5,7 +5,6 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
-using VkLib.Core.Audio.Types;
 
 namespace VkLib.Core.Audio
 {

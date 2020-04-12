@@ -1,4 +1,4 @@
-﻿namespace VkLib.Core.Audio.Types
+﻿namespace VkLib.Core.Audio
 {
     public class VkArtist
     {

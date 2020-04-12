@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using VkLib.Extensions;
 
-namespace VkLib.Core.Audio.Types
+namespace VkLib.Core.Audio
 {
     public class VkPlaylistOriginal
     {
