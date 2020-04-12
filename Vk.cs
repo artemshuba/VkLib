@@ -178,7 +178,7 @@ namespace VkLib
         /// </summary>
         public VkStoreRequest Store => new VkStoreRequest(this);
 
-        public Vk(string appId, string clientSecret, string apiVersion, string userAgent)
+        public Vk(string appId, string clientSecret, string apiVersion, string userAgent = null)
         {
             AccessToken = new VkAccessToken();
             ApiVersion = apiVersion;

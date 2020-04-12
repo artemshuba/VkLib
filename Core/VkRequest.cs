@@ -100,7 +100,9 @@ namespace VkLib.Core
             }
 
             var client = new HttpClient(handler);
-            client.DefaultRequestHeaders.Add("User-Agent", UserAgent);
+
+            if (!string.IsNullOrWhiteSpace(UserAgent))
+                client.DefaultRequestHeaders.Add("User-Agent", UserAgent);
 
             return client;
         }
