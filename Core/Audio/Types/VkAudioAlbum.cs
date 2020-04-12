@@ -12,6 +12,10 @@ namespace VkLib.Core.Audio
 
         public string Title { get; set; }
 
+        public string AccessKey { get; set; }
+
+        public VkThumb Thumb { get; set; }
+
         public static VkAudioAlbum FromJson(JToken json)
         {
             if (json == null)
@@ -22,6 +26,9 @@ namespace VkLib.Core.Audio
             result.Id = json["id"].Value<long>();
             result.OwnerId = Math.Abs(json["owner_id"].Value<long>());
             result.Title = WebUtility.HtmlDecode(json["title"].Value<string>());
+            result.AccessKey = json["access_key"].Value<string>();
+            if (json["thumb"] != null)
+                result.Thumb = json["thumb"].ToObject<VkThumb>();
             return result;
         }
     }

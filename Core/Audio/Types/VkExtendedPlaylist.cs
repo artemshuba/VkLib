@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 
-namespace VkLib.Core.Audio.Types
+namespace VkLib.Core.Audio
 {
     public class VkExtendedPlaylist
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using VkLib.Core.Groups;
 using VkLib.Core.Users;
 
-namespace VkLib.Core.Audio.Types
+namespace VkLib.Core.Audio
 {
     /// <summary>
     /// Catalog block

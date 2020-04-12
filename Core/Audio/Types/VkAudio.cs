@@ -67,6 +67,11 @@ namespace VkLib.Core.Audio
         /// </summary>
         public string AccessKey { get; set; }
 
+        /// <summary>
+        /// Album
+        /// </summary>
+        public VkAudioAlbum Album { get; set; }
+
         internal static VkAudio FromJson(JToken json)
         {
             if (json == null)
@@ -106,6 +111,9 @@ namespace VkLib.Core.Audio
 
             if (json["access_key"] != null)
                 result.AccessKey = json["access_key"].Value<string>();
+
+            if (json["album"] != null)
+                result.Album = VkAudioAlbum.FromJson(json["album"]);
 
             return result;
         }
